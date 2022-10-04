@@ -1,11 +1,12 @@
 //This program converts types - created by Ashley Oyewole (SN: 251233783)
 
 #include <stdio.h>
-
-void kg_pounds(), hec_acres(), litres_gallons(), km_miles();
+#include <ctype.h>
 
 char inputChar;
 int inputType;
+
+void kg_pounds(), hec_acres(), litres_gallons(), km_miles(); // declare conversion functions
 
 int main() {
 
@@ -22,24 +23,24 @@ int main() {
     scanf(" %d", &inputType);
 
     if (inputType == 1) {
-        kg_pounds();
+        kg_pounds(); // calls kg --> pounds function
     }
     else if (inputType == 2) {
-        hec_acres();
+        hec_acres(); // calls hectares --> acres function
     }
     else if (inputType == 3) {
-        litres_gallons();
+        litres_gallons(); // calls litres --> gallons function
     }
     else if (inputType == 4) {
-        km_miles();
+        km_miles(); // calls km --> miles function
     }
 
     else if (inputType == 5) {
-        printf("Program complete.\n");
+        printf("Program complete.\n"); // terminate program
         return 0;
     }
     else {
-        printf("Invalid input!\n");
+        printf("Invalid input!\n"); // calls main() after invalid input
         main();
     }
 }
@@ -54,21 +55,21 @@ void kg_pounds() {
 
     if (toupper(inputChar) == 'K') {
         
-        printf("\n Enter kilogram(s): ");
+        printf("\nEnter kilogram(s): ");
         scanf(" %f", &kg);
 
         pounds = kg * 2.20462;
-        printf("%f kilogram(s) is equal to %f pounds\n\n", kg, pounds);
+        printf("%1.0f kilogram(s) is equal to %f pound(s)\n\n", kg, pounds);
         main();
     }
 
     else if (toupper(inputChar) == 'P') {
 
-        printf("\n Enter pound(s): ");
+        printf("\nEnter pound(s): ");
         scanf(" %f", &pounds);
 
         kg = pounds / 2.20462;
-        printf("%f pound(s) is equal to %f kilograms\n\n", pounds, kg);
+        printf("%1.0f pound(s) is equal to %f kilogram(s)\n\n", pounds, kg);
         main();
     }
 
@@ -88,21 +89,21 @@ void hec_acres() {
 
     if (toupper(inputChar) == 'H') {
         
-        printf("\n Enter hectare(s): ");
+        printf("\nEnter hectare(s): ");
         scanf(" %f", &hec);
 
         acres = hec * 2.47105;
-        printf("%f hectares(s) is equal to %f acres\n\n", hec, acres);
+        printf("%1.0f hectares(s) is equal to %f acre(s)\n\n", hec, acres);
         main();
     }
 
     else if (toupper(inputChar) == 'A') {
 
-        printf("\n Enter acre(s): ");
+        printf("\nEnter acre(s): ");
         scanf(" %f", &acres);
 
         hec = acres / 2.47105;
-        printf("%f acre(s) is equal to %f hectare(s)\n\n", acres, hec);
+        printf("%1.0f acre(s) is equal to %f hectare(s)\n\n", acres, hec);
         main();
     }
 
@@ -122,21 +123,21 @@ void litres_gallons() {
 
     if (toupper(inputChar) == 'L') {
         
-        printf("\n Enter litre(s): ");
+        printf("\nEnter litre(s): ");
         scanf(" %f", &litres);
 
         gallons = litres * 0.264172;
-        printf("%f litres(s) is equal to %f gallons\n\n", litres, gallons);
+        printf("%1.0f litres(s) is equal to %f gallon(s)\n\n", litres, gallons);
         main();
     }
 
     else if (toupper(inputChar) == 'G') {
 
-        printf("\n Enter gallon(s): ");
+        printf("\nEnter gallon(s): ");
         scanf(" %f", &gallons);
 
         litres = gallons / 0.264172;
-        printf("%f gallon(s) is equal to %f litre(s)\n\n", gallons, litres);
+        printf("%1.0f gallon(s) is equal to %f litre(s)\n\n", gallons, litres);
         main();
     }
 
@@ -156,21 +157,21 @@ void km_miles() {
 
     if (toupper(inputChar) == 'K') {
         
-        printf("\n Enter kilometer(s): ");
+        printf("\nEnter kilometer(s): ");
         scanf(" %f", &km);
 
         miles = km * 0.621371;
-        printf("%f kilometer(s) is equal to %f mile(s)\n\n", km, miles);
+        printf("%1.0f kilometer(s) is equal to %f mile(s)\n\n", km, miles);
         main();
     }
 
     else if (toupper(inputChar) == 'M') {
 
-        printf("\n Enter mile(s): ");
+        printf("\nEnter mile(s): ");
         scanf(" %f", &miles);
 
         km = miles / 0.621371;
-        printf("%f mile(s) is equal to %f kilometer(s)\n\n", miles, km);
+        printf("%1.0f mile(s) is equal to %f kilometer(s)\n\n", miles, km);
         main();
     }
 
