@@ -10,7 +10,7 @@ void kg_pounds(), hec_acres(), litres_gallons(), km_miles(); // declare conversi
 
 int main() {
     
-    printf("© Ashley Oyewole \n\n");
+    printf("Copyright © 2022 Ashley Oyewole \n\n");
     printf("Welcome to Type Converter! \n----\n");
 
     printf(
