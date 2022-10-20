@@ -1,4 +1,4 @@
-# Type Converter
+# C Type Converter
 This program converts distance and weight.
 
 ### Available conversions:
