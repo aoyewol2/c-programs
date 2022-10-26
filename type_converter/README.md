@@ -1,5 +1,5 @@
 # C Type Converter
-This program converts distance and weight.
+This program converts distance and weight. Used to learn command line input and flow control structures.
 
 ### Available conversions:
 - Kilograms to or from pounds
